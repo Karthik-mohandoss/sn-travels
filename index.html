@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SN Travels | Premium Taxi Service in Tamil Nadu</title>
+    <meta name="description" content="SN Travels – Tamil Nadu's most trusted taxi service. Book Hatchback, Sedan, SUV, or Innova for outstation, airport transfer, and one-way drops. Call +91 9080573379.">
+    <meta name="keywords" content="SN Travels, taxi service Tamil Nadu, outstation taxi, cab booking, airport taxi, reliable taxi">
+    <link rel="canonical" href="https://sn-travels.in/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="SN Travels – #1 Trusted Taxi Service">
+    <meta property="og:description" content="Safe, reliable outstation taxi service across Tamil Nadu. Transparent fares, professional drivers. Book now: +91 9080573379.">
+    <meta property="og:url" content="https://sn-travels.in/">
+    <meta property="og:type" content="website">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SN Travels",
+        "description": "Trusted taxi service for outstation, airport transfers, one-way drops, round trips, and local rides.",
+        "telephone": "+919080573379",
+        "url": "https://sn-travels.in",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "IN"
+        },
+        "openingHours": "Mo-Su 00:00-24:00",
+        "priceRange": "₹₹",
+        "serviceType": "Taxi Service",
+        "areaServed": "Tamil Nadu"
+    }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-car-side"></i>
+                </div>
+                <div class="logo-text">SN <span>Travels</span></div>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#fleet" class="nav-link">Our Fleet</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+919080573379" class="btn btn-outline">
+                    <i class="fas fa-phone-alt"></i> +91 90805 73379
+                </a>
+                <a href="#home" class="btn btn-primary">
+                    Book Ride
+                </a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#fleet" class="nav-link">Our Fleet</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="tel:+919080573379" class="btn btn-primary" style="margin-top: 1rem;">
+            <i class="fas fa-phone-alt"></i> Call Now
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge"><i class="fas fa-star"></i> Top Rated Taxi Service</span>
+                <h1 class="hero-title">
+                    Comfortable Rides,<br>
+                    <span>Anywhere, Anytime.</span>
+                </h1>
+                <p class="hero-desc">
+                    SN Travels connects you to every destination across Tamil Nadu. Professional drivers, transparent fares, and always on time. Your premium ride awaits.
+                </p>
+                <div class="hero-actions">
+                    <a href="#services" class="btn btn-primary">Explore Services</a>
+                    <a href="tel:+919080573379" class="btn btn-outline" style="color: white; border-color: rgba(255,255,255,0.3);">
+                        <i class="fas fa-phone-alt"></i> +91 90805 73379
+                    </a>
+                </div>
+                <div class="hero-features">
+                    <div class="hf-item"><i class="fas fa-shield-alt"></i> Safe & Secure</div>
+                    <div class="hf-item"><i class="fas fa-clock"></i> 24/7 Available</div>
+                    <div class="hf-item"><i class="fas fa-tags"></i> Fixed Fares</div>
+                </div>
+            </div>
+
+            <!-- Booking Card -->
+            <div class="booking-card">
+                <div class="bc-header">
+                    <h2 class="bc-title">Quick Booking</h2>
+                    <p class="bc-subtitle">Enter details to get instant fares</p>
+                </div>
+                <form id="bookingForm">
+                    <div class="input-group">
+                        <label class="input-label" for="mobile">Mobile Number</label>
+                        <div class="input-field">
+                            <i class="fas fa-mobile-alt"></i>
+                            <input type="tel" id="mobile" placeholder="+91 10-digit number" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group" style="margin-bottom: 0;">
+                        <label class="input-label" for="pickup">Pickup Location</label>
+                        <div class="input-field">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" id="pickup" placeholder="City or Area" required>
+                        </div>
+                    </div>
+                    
+                    <div class="input-swap">
+                        <button class="swap-btn" title="Swap Locations">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label" for="dropoff">Drop Location</label>
+                        <div class="input-field">
+                            <i class="fas fa-map-pin"></i>
+                            <input type="text" id="dropoff" placeholder="Destination" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary book-btn" id="bookBtn">
+                        Check Fares & Book
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-padding" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge"><i class="fas fa-list"></i> What We Offer</span>
+                <h2 class="section-title">Premium Taxi Services</h2>
+                <p class="section-subtitle">From local trips to long outstation journeys — SN Travels covers it all with comfort and reliability.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-road"></i></div>
+                    <h3 class="service-title">Outstation One-Way</h3>
+                    <p class="service-desc">Travel to any city in Tamil Nadu. Affordable one-way drop with no return charges.</p>
+                    <a href="#home" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3 class="service-title">Round Trip Rides</h3>
+                    <p class="service-desc">Book for both ways and enjoy package pricing for tours, family trips, and business travel.</p>
+                    <a href="#home" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-plane-departure"></i></div>
+                    <h3 class="service-title">Airport Transfers</h3>
+                    <p class="service-desc">On-time pickup and drop to airports. Available for all flights, day or night.</p>
+                    <a href="#home" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-city"></i></div>
+                    <h3 class="service-title">Local City Taxi</h3>
+                    <p class="service-desc">Hire a cab for local errands, office runs, shopping, or hospital visits.</p>
+                    <a href="#home" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section-padding" style="background-color: var(--surface-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge"><i class="fas fa-layer-group"></i> Simple Process</span>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Booking your ride is simple, fast, and completely transparent.</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h3 class="step-title">Enter Your Route</h3>
+                    <p class="step-desc">Provide your pickup and drop locations to get an instant fare estimate.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h3 class="step-title">Choose Your Cab</h3>
+                    <p class="step-desc">Select from our wide range of premium vehicles that fit your needs and budget.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h3 class="step-title">Enjoy The Ride</h3>
+                    <p class="step-desc">Our verified driver will arrive on time. Sit back, relax, and enjoy your journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section class="section-padding fleet" id="fleet">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge light"><i class="fas fa-car"></i> Our Vehicles</span>
+                <h2 class="section-title">Choose Your Comfort</h2>
+                <p class="section-subtitle">We maintain a modern fleet of sanitized, air-conditioned vehicles to ensure a premium experience.</p>
+            </div>
+            
+            <div class="fleet-grid">
+                <!-- Vehicle 1 -->
+                <div class="fleet-card">
+                    <div class="fleet-img">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <div class="fleet-content">
+                        <h3 class="fleet-title">Sedan</h3>
+                        <div class="fleet-features">
+                            <span><i class="fas fa-users"></i> 4 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 2 Bags</span>
+                            <span><i class="fas fa-snowflake"></i> AC</span>
+                        </div>
+                        <div class="fleet-footer">
+                            <div class="fleet-price">₹15<span>/km</span></div>
+                            <a href="#home" class="btn btn-primary" style="padding: 0.5rem 1rem;">Select</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vehicle 2 -->
+                <div class="fleet-card">
+                    <div class="fleet-img">
+                        <i class="fas fa-car-suv"></i>
+                    </div>
+                    <div class="fleet-content">
+                        <h3 class="fleet-title">SUV</h3>
+                        <div class="fleet-features">
+                            <span><i class="fas fa-users"></i> 6 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 4 Bags</span>
+                            <span><i class="fas fa-snowflake"></i> AC</span>
+                        </div>
+                        <div class="fleet-footer">
+                            <div class="fleet-price">₹20<span>/km</span></div>
+                            <a href="#home" class="btn btn-primary" style="padding: 0.5rem 1rem;">Select</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vehicle 3 -->
+                <div class="fleet-card">
+                    <div class="fleet-img">
+                        <i class="fas fa-van-shuttle"></i>
+                    </div>
+                    <div class="fleet-content">
+                        <h3 class="fleet-title">Innova Crysta</h3>
+                        <div class="fleet-features">
+                            <span><i class="fas fa-users"></i> 7 Seats</span>
+                            <span><i class="fas fa-suitcase"></i> 5 Bags</span>
+                            <span><i class="fas fa-snowflake"></i> AC</span>
+                        </div>
+                        <div class="fleet-footer">
+                            <div class="fleet-price">₹23<span>/km</span></div>
+                            <a href="#home" class="btn btn-primary" style="padding: 0.5rem 1rem;">Select</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding cta-section">
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="section-title">Ready to Experience Premium Travel?</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Book your ride today and enjoy hassle-free, comfortable transportation across Tamil Nadu.</p>
+            <div class="cta-btns">
+                <a href="#home" class="btn btn-primary"><i class="fas fa-taxi"></i> Book Online</a>
+                <a href="tel:+919080573379" class="btn btn-outline" style="color: white; border-color: white;"><i class="fas fa-phone-alt"></i> +91 90805 73379</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="/" class="footer-logo">
+                        <div class="logo-icon"><i class="fas fa-car-side"></i></div>
+                        <div class="logo-text">SN <span>Travels</span></div>
+                    </a>
+                    <p class="footer-desc">Your trusted, premium taxi partner in Tamil Nadu. Outstation rides, airport transfers, and local trips with transparent fares.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919080573379" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#home" class="footer-link"><i class="fas fa-angle-right"></i> Home</a>
+                        <a href="#services" class="footer-link"><i class="fas fa-angle-right"></i> Services</a>
+                        <a href="#fleet" class="footer-link"><i class="fas fa-angle-right"></i> Our Fleet</a>
+                        <a href="#contact" class="footer-link"><i class="fas fa-angle-right"></i> Contact</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Services</h3>
+                    <div class="footer-links">
+                        <a href="#services" class="footer-link"><i class="fas fa-angle-right"></i> Outstation Drops</a>
+                        <a href="#services" class="footer-link"><i class="fas fa-angle-right"></i> Round Trips</a>
+                        <a href="#services" class="footer-link"><i class="fas fa-angle-right"></i> Airport Transfers</a>
+                        <a href="#services" class="footer-link"><i class="fas fa-angle-right"></i> Local City Taxi</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="footer-contact">
+                        <div class="fc-item">
+                            <div class="fc-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="fc-text">
+                                <h4>Call or WhatsApp</h4>
+                                <p>+91 90805 73379</p>
+                            </div>
+                        </div>
+                        <div class="fc-item">
+                            <div class="fc-icon"><i class="fas fa-globe"></i></div>
+                            <div class="fc-text">
+                                <h4>Website</h4>
+                                <p>sn-travels.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                &copy; 2026 SN Travels. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions">
+        <a href="tel:+919080573379" class="float-btn float-call" title="Call Us">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://wa.me/919080573379?text=Hi%20SN%20Travels!%20I%20want%20to%20book%20a%20ride." class="float-btn float-wa" target="_blank" rel="noopener" title="WhatsApp Us">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
