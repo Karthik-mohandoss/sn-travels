@@ -181,4 +181,33 @@ document.addEventListener('DOMContentLoaded', () => {
             handleFormSubmit(e, `Confirm Booking - ${type}`, 'modalMobile', 'modalPickup', 'modalDropoff', 'confirmBookBtn');
         });
     }
+
+    // Initialize Google Maps Places Autocomplete
+    const initAutocomplete = () => {
+        const options = {
+            componentRestrictions: { country: "in" },
+            fields: ["formatted_address", "geometry", "name"],
+        };
+
+        const pickupInput = document.getElementById('pickup');
+        const dropoffInput = document.getElementById('dropoff');
+        const modalPickupInput = document.getElementById('modalPickup');
+        const modalDropoffInput = document.getElementById('modalDropoff');
+
+        if (pickupInput && window.google) new google.maps.places.Autocomplete(pickupInput, options);
+        if (dropoffInput && window.google) new google.maps.places.Autocomplete(dropoffInput, options);
+        if (modalPickupInput && window.google) new google.maps.places.Autocomplete(modalPickupInput, options);
+        if (modalDropoffInput && window.google) new google.maps.places.Autocomplete(modalDropoffInput, options);
+    };
+
+    // Call init when google maps is loaded, or wait for it
+    if (window.google && window.google.maps) {
+        initAutocomplete();
+    } else {
+        // Since we load the script synchronously before this script, it should be available.
+        // But adding a small timeout fallback just in case.
+        setTimeout(() => {
+            if (window.google && window.google.maps) initAutocomplete();
+        }, 1000);
+    }
 });

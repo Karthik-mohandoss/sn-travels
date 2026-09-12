@@ -1001,3 +1001,8 @@ img {
   color: var(--primary-hover);
   transform: rotate(90deg);
 }
+
+/* Fix Google Maps Autocomplete z-index to show above modal */
+.pac-container {
+  z-index: 100000 !important;
+}
