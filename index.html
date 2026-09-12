@@ -376,6 +376,47 @@
         </div>
     </footer>
 
+    <!-- Confirm Booking Modal -->
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn"><i class="fas fa-times"></i></button>
+            <div class="bc-header" style="margin-bottom: 1.5rem;">
+                <h2 class="bc-title">Confirm Booking</h2>
+                <p class="bc-subtitle" id="modalSubtitle">Please enter details to confirm your ride</p>
+            </div>
+            <form id="confirmBookingForm">
+                <input type="hidden" id="modalCabType" value="General">
+                <div class="input-group">
+                    <label class="input-label" for="modalMobile">Mobile Number</label>
+                    <div class="input-field">
+                        <i class="fas fa-mobile-alt"></i>
+                        <input type="tel" id="modalMobile" placeholder="+91 10-digit number" required>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="modalPickup">Pickup Location</label>
+                    <div class="input-field">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="modalPickup" placeholder="City or Area" required>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label class="input-label" for="modalDropoff">Drop Location</label>
+                    <div class="input-field">
+                        <i class="fas fa-map-pin"></i>
+                        <input type="text" id="modalDropoff" placeholder="Destination" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary book-btn" id="confirmBookBtn" style="margin-top: 0.5rem;">
+                    Confirm Booking
+                </button>
+            </form>
+        </div>
+    </div>
+
     <!-- Floating Actions -->
     <div class="floating-actions">
         <a href="tel:+919080573379" class="float-btn float-call" title="Call Us">
