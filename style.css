@@ -205,9 +205,8 @@ img {
 }
 
 .brand-logo {
-  height: 60px; /* Adjust as needed */
+  height: 90px; /* Increased logo size */
   object-fit: contain;
-  mix-blend-mode: multiply; /* Magically removes the white background on white/light headers */
 }
 
 .nav-links {
