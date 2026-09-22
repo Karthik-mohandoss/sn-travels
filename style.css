@@ -678,10 +678,10 @@ img {
 }
 
 .footer-logo-img {
-    height: 45px !important;
-    max-height: 45px;
+    height: 75px !important;
+    max-height: 75px;
     width: auto;
-    max-width: 150px;
+    max-width: 250px;
     object-fit: contain;
     margin-bottom: 1.5rem;
     border-radius: 4px; /* Soften the white box edges */
