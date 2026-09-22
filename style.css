@@ -201,31 +201,13 @@ img {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  text-decoration: none;
 }
 
-.logo-icon {
-  width: 40px;
-  height: 40px;
-  background: var(--bg-dark);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  font-size: 1.25rem;
-}
-
-.logo-text {
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: var(--bg-dark);
-  line-height: 1;
-}
-
-.logo-text span {
-  color: var(--primary-hover);
+.brand-logo {
+  height: 60px; /* Adjust as needed */
+  object-fit: contain;
+  mix-blend-mode: multiply; /* Magically removes the white background on white/light headers */
 }
 
 .nav-links {

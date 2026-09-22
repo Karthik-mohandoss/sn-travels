@@ -141,8 +141,7 @@ if (!empty($mobile) && !empty($pickup) && !empty($dropoff)) {
     <header class="header" style="background: white;">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <div class="logo-icon"><i class="fas fa-car-side"></i></div>
-                <div class="logo-text">SN <span>Travels</span></div>
+                <img src="logo.png" alt="SN Travels Logo" class="brand-logo">
             </a>
             <div class="header-actions">
                 <a href="tel:+919080573379" class="btn btn-outline"><i class="fas fa-phone-alt"></i> +91 90805 73379</a>
