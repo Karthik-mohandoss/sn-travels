@@ -117,12 +117,12 @@
                     <h2 class="bc-title">Quick Booking</h2>
                     <p class="bc-subtitle">Enter details to get instant fares</p>
                 </div>
-                <form id="bookingForm">
+                <form id="bookingForm" action="cars.php" method="GET">
                     <div class="input-group">
                         <label class="input-label" for="mobile">Mobile Number</label>
                         <div class="input-field">
                             <i class="fas fa-mobile-alt"></i>
-                            <input type="tel" id="mobile" placeholder="+91 10-digit number" required>
+                            <input type="tel" id="mobile" name="mobile" placeholder="+91 10-digit number" required>
                         </div>
                     </div>
                     
@@ -130,12 +130,12 @@
                         <label class="input-label" for="pickup">Pickup Location</label>
                         <div class="input-field">
                             <i class="fas fa-map-marker-alt"></i>
-                            <input type="text" id="pickup" placeholder="City or Area" required>
+                            <input type="text" id="pickup" name="pickup" placeholder="City or Area" required>
                         </div>
                     </div>
                     
                     <div class="input-swap">
-                        <button class="swap-btn" title="Swap Locations">
+                        <button type="button" class="swap-btn" title="Swap Locations">
                             <i class="fas fa-exchange-alt"></i>
                         </button>
                     </div>
@@ -144,7 +144,7 @@
                         <label class="input-label" for="dropoff">Drop Location</label>
                         <div class="input-field">
                             <i class="fas fa-map-pin"></i>
-                            <input type="text" id="dropoff" placeholder="Destination" required>
+                            <input type="text" id="dropoff" name="dropoff" placeholder="Destination" required>
                         </div>
                     </div>
 
@@ -384,13 +384,13 @@
                 <h2 class="bc-title">Confirm Booking</h2>
                 <p class="bc-subtitle" id="modalSubtitle">Please enter details to confirm your ride</p>
             </div>
-            <form id="confirmBookingForm">
-                <input type="hidden" id="modalCabType" value="General">
+            <form id="confirmBookingForm" action="cars.php" method="GET">
+                <input type="hidden" id="modalCabType" name="cabType" value="General">
                 <div class="input-group">
                     <label class="input-label" for="modalMobile">Mobile Number</label>
                     <div class="input-field">
                         <i class="fas fa-mobile-alt"></i>
-                        <input type="tel" id="modalMobile" placeholder="+91 10-digit number" required>
+                        <input type="tel" id="modalMobile" name="mobile" placeholder="+91 10-digit number" required>
                     </div>
                 </div>
                 
@@ -398,7 +398,7 @@
                     <label class="input-label" for="modalPickup">Pickup Location</label>
                     <div class="input-field">
                         <i class="fas fa-map-marker-alt"></i>
-                        <input type="text" id="modalPickup" placeholder="City or Area" required>
+                        <input type="text" id="modalPickup" name="pickup" placeholder="City or Area" required>
                     </div>
                 </div>
                 
@@ -406,7 +406,7 @@
                     <label class="input-label" for="modalDropoff">Drop Location</label>
                     <div class="input-field">
                         <i class="fas fa-map-pin"></i>
-                        <input type="text" id="modalDropoff" placeholder="Destination" required>
+                        <input type="text" id="modalDropoff" name="dropoff" placeholder="Destination" required>
                     </div>
                 </div>
 

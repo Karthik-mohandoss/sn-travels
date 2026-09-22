@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Swap Locations
+    // Swap Locations logic remains
     const swapBtn = document.querySelector('.swap-btn');
     if (swapBtn) {
         swapBtn.addEventListener('click', (e) => {
@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 fromInput.value = toInput.value;
                 toInput.value = temp;
                 
-                // Add a small rotation animation to icon
                 swapBtn.style.transform = 'rotate(180deg)';
                 setTimeout(() => {
                     swapBtn.style.transition = 'none';
@@ -63,65 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 50);
                 }, 300);
             }
-        });
-    }
-
-    // Function to handle form submission
-    const handleFormSubmit = (e, formType, mobileId, pickupId, dropoffId, btnId) => {
-        e.preventDefault();
-        const mobile = document.getElementById(mobileId)?.value;
-        const pickup = document.getElementById(pickupId)?.value;
-        const dropoff = document.getElementById(dropoffId)?.value;
-        const btn = document.getElementById(btnId);
-        
-        if (!mobile || !pickup || !dropoff) {
-            alert('Please fill in all the details (Mobile, Pickup, Drop-off).');
-            return;
-        }
-
-        const originalText = btn.innerHTML;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        btn.disabled = true;
-
-        fetch('send_mail.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                formType: formType,
-                mobile: mobile,
-                pickup: pickup,
-                dropoff: dropoff
-            })
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.status === 'success') {
-                alert('Booking request sent successfully! We will contact you shortly.');
-                // Also redirect to WhatsApp
-                const waNumber = '919080573379';
-                const message = `Hi SN Travels! I have sent a booking request.\n\nType: ${formType}\nFrom: ${pickup}\nTo: ${dropoff}\nMobile: ${mobile}`;
-                window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
-            } else {
-                alert('Error: ' + data.message);
-            }
-        })
-        .catch(err => {
-            alert('Something went wrong, but you can still book via WhatsApp!');
-            const waNumber = '919080573379';
-            const message = `Hi SN Travels! I would like to book a ride.\n\nFrom: ${pickup}\nTo: ${dropoff}\nMobile: ${mobile}`;
-            window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
-        })
-        .finally(() => {
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-        });
-    };
-
-    // Quick Booking Form Submit
-    const bookBtn = document.getElementById('bookBtn');
-    if (bookBtn) {
-        bookBtn.addEventListener('click', (e) => {
-            handleFormSubmit(e, 'Quick Booking', 'mobile', 'pickup', 'dropoff', 'bookBtn');
         });
     }
 
@@ -172,15 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
             openModal(title);
         });
     });
-
-    // Confirm Booking Form Submit
-    const confirmBookBtn = document.getElementById('confirmBookBtn');
-    if (confirmBookBtn) {
-        confirmBookBtn.addEventListener('click', (e) => {
-            const type = document.getElementById('modalCabType').value;
-            handleFormSubmit(e, `Confirm Booking - ${type}`, 'modalMobile', 'modalPickup', 'modalDropoff', 'confirmBookBtn');
-        });
-    }
 
 });
 
