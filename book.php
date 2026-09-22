@@ -56,6 +56,15 @@ $distance = isset($_GET['distance']) ? htmlspecialchars($_GET['distance']) : '';
         }
         .submit-btn:hover { background: #e5b300; transform: translateY(-2px); }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18445888475"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18445888475');
+    </script>
 </head>
 <body>
     <!-- Header -->

@@ -81,6 +81,15 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
         }
         #loading { text-align: center; padding: 50px; font-size: 1.2rem; color: var(--primary-color); }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18445888475"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18445888475');
+    </script>
 </head>
 <body>
     <!-- Header -->
