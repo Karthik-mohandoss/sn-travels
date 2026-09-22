@@ -154,7 +154,7 @@ $distance = isset($_GET['distance']) ? htmlspecialchars($_GET['distance']) : '';
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 SN Travels. All rights reserved. Developed by <a href="https://apexsofttech.com" target="_blank" style="color: var(--accent-color); text-decoration: none;">ApexSoftTech</a>.</p>
+                <p>&copy; 2026 SN Travels. All rights reserved. Developed by <a href="https://apexsofttech.co.in" target="_blank" style="color: var(--accent-color); text-decoration: none;">ApexSoftTech</a>.</p>
             </div>
         </div>
     </footer>
