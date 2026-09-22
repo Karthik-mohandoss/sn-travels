@@ -136,7 +136,7 @@ $distance = isset($_GET['distance']) ? htmlspecialchars($_GET['distance']) : '';
             <div class="footer-grid">
                 <div>
                     <a href="index.html" class="logo" style="margin-bottom: 1.5rem;">
-                        <img src="logo.png" alt="SN Travels Logo" class="footer-logo-img">
+                        <img src="logo_footer.png" alt="SN Travels Logo" class="footer-logo-img">
                     </a>
                     <p class="footer-desc">Your trusted, premium taxi partner in Tamil Nadu.</p>
                 </div>
