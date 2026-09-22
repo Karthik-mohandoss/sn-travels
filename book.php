@@ -67,8 +67,7 @@ $distance = isset($_GET['distance']) ? htmlspecialchars($_GET['distance']) : '';
     </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" style="background: rgba(255, 255, 255, 0.98); box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+    <header class="header" style="background: #ffffff; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <img src="logo.png" alt="SN Travels Logo" class="brand-logo">
@@ -155,7 +154,7 @@ $distance = isset($_GET['distance']) ? htmlspecialchars($_GET['distance']) : '';
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 SN Travels. All rights reserved.</p>
+                <p>&copy; 2026 SN Travels. All rights reserved. Developed by <a href="https://apexsofttech.com" target="_blank" style="color: var(--accent-color); text-decoration: none;">ApexSoftTech</a>.</p>
             </div>
         </div>
     </footer>

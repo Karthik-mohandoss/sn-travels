@@ -91,6 +91,10 @@ $waUrl = "https://wa.me/" . $waNumber . "?text=" . urlencode($waText);
 
       gtag('config', 'AW-18445888475');
     </script>
+    <!-- Event snippet for Submit lead form conversion page -->
+    <script>
+      gtag('event', 'conversion', {'send_to': 'AW-18445888475/Kt08CLS75YAdENvX19tE'});
+    </script>
 </head>
 <body>
     <div class="redirect-box">
