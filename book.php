@@ -13,7 +13,7 @@ $distance = isset($_GET['distance']) ? htmlspecialchars($_GET['distance']) : '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Details - SN Travels</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .book-page { padding-top: 100px; padding-bottom: 50px; background: #f8f9fa; }

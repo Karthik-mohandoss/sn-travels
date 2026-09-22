@@ -205,7 +205,10 @@ img {
 }
 
 .brand-logo {
-  height: 45px; /* Noticeably smaller logo */
+  height: 45px !important;
+  max-height: 45px;
+  width: auto;
+  max-width: 150px;
   object-fit: contain;
 }
 
@@ -675,7 +678,10 @@ img {
 }
 
 .footer-logo-img {
-    height: 45px; /* Noticeably smaller logo */
+    height: 45px !important;
+    max-height: 45px;
+    width: auto;
+    max-width: 150px;
     object-fit: contain;
     margin-bottom: 1.5rem;
 }
