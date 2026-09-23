@@ -17,44 +17,51 @@ $distance = isset($_GET['distance']) ? htmlspecialchars($_GET['distance']) : '';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .book-page { padding-top: 100px; padding-bottom: 50px; background: #f8f9fa; }
-        .book-container { max-width: 600px; margin: 0 auto; padding: 0 5%; }
+        .book-container { max-width: 650px; margin: 0 auto; padding: 0 5%; }
         
         .summary-card {
-            background: var(--primary-color);
+            background: var(--bg-dark);
             color: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 12px;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--primary);
         }
-        .summary-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; }
-        .summary-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem; }
-        .summary-row.total { font-size: 1.2rem; font-weight: 800; color: var(--accent-color); margin-top: 15px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.3); }
+        .summary-title { font-size: 1.4rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
+        .summary-row { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 1.05rem; }
+        .summary-row span:first-child { color: #a0aec0; }
+        .summary-row span:last-child { font-weight: 600; text-align: right; }
+        .summary-row.total { font-size: 1.4rem; font-weight: 800; color: var(--primary); margin-top: 20px; padding-top: 20px; border-top: 1px dashed rgba(255,255,255,0.2); }
+        .summary-row.total span:first-child { color: white; }
         
         .form-card {
             background: white;
-            padding: 30px;
+            padding: 40px 30px;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
         }
-        .form-group { margin-bottom: 20px; }
-        .form-label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--text-color); font-size: 0.9rem; }
-        .form-control { width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.3s; }
-        .form-control:focus { border-color: var(--primary-color); }
+        .form-group { margin-bottom: 25px; }
+        .form-label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--bg-dark); font-size: 0.95rem; }
+        .form-control { width: 100%; padding: 15px; border: 2px solid #e1e5ee; border-radius: 8px; font-size: 1.05rem; outline: none; transition: all 0.3s ease; background: #f8f9fa; }
+        .form-control:focus { border-color: var(--primary); background: white; box-shadow: 0 0 0 3px rgba(255,183,3,0.1); }
         
         .submit-btn {
             width: 100%;
-            padding: 15px;
-            background: var(--accent-color);
-            color: var(--primary-color);
+            padding: 18px;
+            background: var(--primary);
+            color: var(--bg-darker);
             border: none;
             border-radius: 8px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 800;
             cursor: pointer;
             transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
         }
-        .submit-btn:hover { background: #e5b300; transform: translateY(-2px); }
+        .submit-btn:hover { background: var(--primary-hover); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255,183,3,0.3); }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18445888475"></script>
@@ -82,7 +89,7 @@ $distance = isset($_GET['distance']) ? htmlspecialchars($_GET['distance']) : '';
         <div class="book-container">
             
             <div class="summary-card">
-                <div class="summary-title">Booking Summary</div>
+                <div class="summary-title"><i class="fas fa-receipt"></i> Booking Summary</div>
                 <div class="summary-row"><span>Route</span> <span><?= $pickup ?> &rarr; <?= $dropoff ?></span></div>
                 <div class="summary-row"><span>Trip Type</span> <span><?= $tripType ?> (<?= $distance ?> km)</span></div>
                 <div class="summary-row"><span>Car Selected</span> <span><?= $car ?></span></div>
@@ -90,7 +97,7 @@ $distance = isset($_GET['distance']) ? htmlspecialchars($_GET['distance']) : '';
             </div>
 
             <div class="form-card">
-                <h3 style="margin-bottom: 20px; color: var(--primary-color);">Enter Passenger Details</h3>
+                <h3 style="margin-bottom: 25px; font-size: 1.5rem; color: var(--bg-dark); border-left: 4px solid var(--primary); padding-left: 15px;">Passenger Details</h3>
                 <form action="confirm.php" method="GET">
                     <!-- Hidden fields to pass data -->
                     <input type="hidden" name="pickup" value="<?= $pickup ?>">
