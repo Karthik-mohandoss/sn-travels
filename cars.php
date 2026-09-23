@@ -35,8 +35,8 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
             transition: all 0.3s;
         }
         .trip-type-btn.active {
-            background: var(--primary-color);
-            color: white;
+            background: var(--primary);
+            color: var(--bg-darker);
         }
         
         .route-info {
@@ -51,8 +51,8 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
             flex-wrap: wrap;
             gap: 15px;
         }
-        .route-details { display: flex; align-items: center; gap: 15px; font-weight: 600; color: var(--text-color); }
-        .route-dist { background: var(--accent-color); color: var(--primary-color); padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.9rem; }
+        .route-details { display: flex; align-items: center; gap: 15px; font-weight: 600; color: var(--text-dark); }
+        .route-dist { background: var(--bg-dark); color: var(--primary); padding: 5px 15px; border-radius: 20px; font-weight: 700; font-size: 0.9rem; }
         
         .car-card {
             background: white;
@@ -66,12 +66,12 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
             transition: transform 0.3s ease;
             border-left: 4px solid transparent;
         }
-        .car-card:hover { transform: translateY(-3px); border-left-color: var(--accent-color); }
+        .car-card:hover { transform: translateY(-3px); border-left-color: var(--primary); }
         .car-img { width: 150px; height: 80px; object-fit: contain; }
         .car-info { flex: 1; padding: 0 20px; }
-        .car-name { font-size: 1.3rem; font-weight: 800; color: var(--primary-color); margin-bottom: 5px; }
+        .car-name { font-size: 1.3rem; font-weight: 800; color: var(--bg-dark); margin-bottom: 5px; }
         .car-seats { font-size: 0.9rem; color: #666; margin-bottom: 10px; }
-        .car-price { font-size: 1.6rem; font-weight: 800; color: var(--accent-color); }
+        .car-price { font-size: 1.6rem; font-weight: 800; color: var(--primary-hover); }
         
         @media (max-width: 768px) {
             .car-card { flex-direction: column; text-align: center; }
@@ -79,7 +79,7 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
             .route-info { flex-direction: column; text-align: center; }
             .route-details { flex-direction: column; gap: 5px; }
         }
-        #loading { text-align: center; padding: 50px; font-size: 1.2rem; color: var(--primary-color); }
+        #loading { text-align: center; padding: 50px; font-size: 1.2rem; color: var(--primary); }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18445888475"></script>
@@ -113,7 +113,7 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
 
     <div class="cars-page">
         <div class="cars-container">
-            <h2 style="text-align:center; color:var(--primary-color); margin-bottom:20px;">Select Your Cab</h2>
+            <h2 style="text-align:center; color:var(--bg-dark); margin-bottom:20px;">Select Your Cab</h2>
             
             <div class="trip-type-toggle">
                 <button class="trip-type-btn active" id="btnOneWay" onclick="setTripType('One Way')">One Way Drop</button>
@@ -122,11 +122,11 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
 
             <div class="route-info" style="display:none;" id="routeCard">
                 <div class="route-details">
-                    <span><i class="fas fa-map-marker-alt" style="color: var(--accent-color);"></i> <span id="txtPickup"><?= $pickup ?></span></span>
+                    <span><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> <span id="txtPickup"><?= $pickup ?></span></span>
                     <i class="fas fa-arrow-right"></i>
-                    <span><i class="fas fa-map-pin" style="color: var(--accent-color);"></i> <span id="txtDropoff"><?= $dropoff ?></span></span>
+                    <span><i class="fas fa-map-pin" style="color: var(--primary);"></i> <span id="txtDropoff"><?= $dropoff ?></span></span>
                 </div>
-                <div class="route-dist" id="txtDist">Calculating...</div>
+                <div class="route-dist">Distance: <span id="txtDist">Calculating...</span></div>
             </div>
 
             <div id="loading"><i class="fas fa-spinner fa-spin"></i> Calculating fares...</div>
@@ -256,7 +256,7 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
                     <div class="car-info">
                         <div class="car-name">${c.name}</div>
                         <div class="car-seats">${c.seats} Seater AC Cab</div>
-                        <div style="font-size: 0.85rem; color: #777;"><i class="fas fa-check-circle" style="color: green;"></i> Driver Bata included. Tolls extra.</div>
+                        <div style="font-size: 0.85rem; color: #777;"><i class="fas fa-check-circle" style="color: green;"></i> Driver Bata included. Toll, Permit, Hill Station extra.</div>
                     </div>
                     <div style="text-align:right;">
                         <div class="car-price">₹${fare}</div>
