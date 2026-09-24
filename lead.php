@@ -32,16 +32,14 @@ function sendToTelegram($msg) {
             'text' => $msg
         ];
         
-        $options = [
-            'http' => [
-                'method'  => 'POST',
-                'header'  => "Content-Type:application/x-www-form-urlencoded\r\n",
-                'content' => http_build_query($data),
-                'ignore_errors' => true
-            ]
-        ];
-        $context = stream_context_create($options);
-        @file_get_contents($url, false, $context);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+        $response = curl_exec($ch);
+        curl_close($ch);
     }
 }
 
