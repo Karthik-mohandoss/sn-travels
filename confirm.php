@@ -38,7 +38,34 @@ $headers .= "X-Mailer: PHP/" . phpversion();
 // Send mail silently
 @mail($to, $subject, $message, $headers);
 
-// 2. WHATSAPP REDIRECT
+// 2. SEND TELEGRAM
+function sendToTelegram($msg) {
+    $botToken = "8934344294:AAFrhE6aSk7BpEy8pcZFqsCO0T75iyZMJC8";
+    $chatId = "YOUR_CHAT_ID_HERE"; // We will update this soon!
+    
+    if ($chatId !== "YOUR_CHAT_ID_HERE") {
+        $url = "https://api.telegram.org/bot" . $botToken . "/sendMessage";
+        $data = [
+            'chat_id' => $chatId,
+            'text' => $msg
+        ];
+        
+        $options = [
+            'http' => [
+                'method'  => 'POST',
+                'header'  => "Content-Type:application/x-www-form-urlencoded\r\n",
+                'content' => http_build_query($data),
+                'ignore_errors' => true
+            ]
+        ];
+        $context = stream_context_create($options);
+        @file_get_contents($url, false, $context);
+    }
+}
+
+sendToTelegram($message);
+
+// 3. WHATSAPP REDIRECT
 $waNumber = '919080573379';
 $waText = "Hi SN Travels! I am confirming my booking.\n\n";
 $waText .= "Name: " . $name . "\n";
