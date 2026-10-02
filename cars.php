@@ -187,10 +187,10 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
         const carTypes = [
             { id: 'hatchback', name: 'Hatchback', seats: '4', rateOneWay: 14, rateRound: 13, driver: 400, img: 'https://media.mahindrafirstchoice.com/live_web_images/usedcarsimg/mfc/4351/577927/cover_image-20230718161449.jpeg' },
             { id: 'sedan', name: 'Sedan (Dzire / Etios)', seats: '4', rateOneWay: 15, rateRound: 14, driver: 500, img: 'https://s3.ap-south-1.amazonaws.com/cb360static/uploads/333742ef-2f6c-4f06-9664-faede6dcc1d8--New%20Project%20-%202025-01-16T161103.598.webp' },
-            { id: 'ertiga', name: 'SUV - Maruti Ertiga', seats: '6', rateOneWay: 21, rateRound: 19, driver: 500, img: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/115777/ertiga-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80' },
-            { id: 'innova', name: 'SUV - Toyota Innova', seats: '7', rateOneWay: 21, rateRound: 19, driver: 500, img: 'https://i.pinimg.com/564x/ae/ac/cb/aeaccb280abfd5f4029fc2b48dc9dc73.jpg' },
+            { id: 'ertiga', name: 'SUV - Maruti Ertiga', seats: '6', rateOneWay: 21, rateRound: 19, driver: 500, img: 'https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Ertiga-Tour/9617/1762858404297/front-left-side-47.jpg' },
+            { id: 'innova', name: 'SUV - Toyota Innova', seats: '7', rateOneWay: 21, rateRound: 19, driver: 500, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_MUWMKmSFUy-ITxT3-nVzgiCmnp3mPH5GN9UfG9w3JF7ua_6bWbDNc0&s=10' },
             { id: 'crysta', name: 'Innova Crysta Luxury', seats: '7', rateOneWay: 24, rateRound: 21, driver: 700, img: 'https://images.ctfassets.net/5iu1oya45cp3/tJyQQpUfF0XuYTl6soPvz/c42def0a66d1aa5e33e82ab25385c0d8/New_Project__13_.png' },
-            { id: 'tempo', name: 'Tempo Traveller (12-18 Seater)', seats: '12', rateOneWay: 25, rateRound: 23, driver: 800, img: 'https://www.drop-taxi.in/wp-content/uploads/2021/04/Tempo-Traveler.png' }
+            { id: 'tempo', name: 'Tempo Traveller (12-18 Seater)', seats: '12', rateOneWay: 25, rateRound: 23, driver: 800, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ervkoOur7JiHFych_uf4Z0ahLQOeCLWq123DnzFdSaV7UZBuzWWwWdo&s=10' }
         ];
 
         function setTripType(type) {
