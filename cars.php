@@ -249,24 +249,39 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
             document.getElementById('txtDist').innerText = `${billedKms} km`;
 
             carTypes.forEach(c => {
-                const driverBata = tripType === 'Round Trip' ? c.driver * 2 : c.driver;
-                const activeRate = tripType === 'Round Trip' ? c.rateRound : c.rateOneWay;
-                const fare = Math.round((billedKms * activeRate) + driverBata);
-                
-                html += `
-                <div class="car-card">
-                    <img src="${c.img}" alt="${c.name}" class="car-img">
-                    <div class="car-info">
-                        <div class="car-name">${c.name}</div>
-                        <div class="car-seats">${c.seats} Seater AC Cab</div>
-                        <div style="font-size: 0.85rem; color: #777;"><i class="fas fa-check-circle" style="color: green;"></i> Driver Bata included. Toll, Permit, Hill Station extra.</div>
-                    </div>
-                    <div style="text-align:right;">
-                        <div class="car-price">₹${fare}</div>
-                        <div style="font-size:0.8rem; color:#888; margin-bottom:10px;">(@ ₹${activeRate}/km)</div>
-                        <button class="btn btn-primary" onclick="proceedToBook('${c.name}', ${fare}, ${billedKms})">Book ${c.name.split(' ')[0]}</button>
-                    </div>
-                </div>`;
+                if (c.id === 'tempo') {
+                    html += `
+                    <div class="car-card">
+                        <img src="${c.img}" alt="${c.name}" class="car-img">
+                        <div class="car-info">
+                            <div class="car-name">${c.name}</div>
+                            <div class="car-seats">${c.seats} Seater AC Cab</div>
+                            <div style="font-size: 0.85rem; color: #777;"><i class="fas fa-phone-alt" style="color: green;"></i> Contact us for custom group pricing</div>
+                        </div>
+                        <div style="text-align:right; display:flex; flex-direction:column; justify-content:center;">
+                            <a href="tel:+919080573379" class="btn btn-primary" style="margin-top:auto; margin-bottom:auto;">Call Now</a>
+                        </div>
+                    </div>`;
+                } else {
+                    const driverBata = tripType === 'Round Trip' ? c.driver * 2 : c.driver;
+                    const activeRate = tripType === 'Round Trip' ? c.rateRound : c.rateOneWay;
+                    const fare = Math.round((billedKms * activeRate) + driverBata);
+                    
+                    html += `
+                    <div class="car-card">
+                        <img src="${c.img}" alt="${c.name}" class="car-img">
+                        <div class="car-info">
+                            <div class="car-name">${c.name}</div>
+                            <div class="car-seats">${c.seats} Seater AC Cab</div>
+                            <div style="font-size: 0.85rem; color: #777;"><i class="fas fa-check-circle" style="color: green;"></i> Driver Bata included. Toll, Permit, Hill Station extra.</div>
+                        </div>
+                        <div style="text-align:right;">
+                            <div class="car-price">₹${fare}</div>
+                            <div style="font-size:0.8rem; color:#888; margin-bottom:10px;">(@ ₹${activeRate}/km)</div>
+                            <button class="btn btn-primary" onclick="proceedToBook('${c.name}', ${fare}, ${billedKms})">Book ${c.name.split(' ')[0]}</button>
+                        </div>
+                    </div>`;
+                }
             });
             
             list.innerHTML = html;
