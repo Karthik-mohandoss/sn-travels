@@ -185,7 +185,7 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
         let baseDistanceKm = 0;
 
         const carTypes = [
-            { id: 'hatchback', name: 'Hatchback', seats: '4', rateOneWay: 14, rateRound: 13, driver: 400, img: 'https://media.mahindrafirstchoice.com/live_web_images/usedcarsimg/mfc/4351/577927/cover_image-20230718161449.jpeg' },
+            { id: 'hatchback', name: 'Hatchback', seats: '4', rateOneWay: 15, rateRound: 14, driver: 500, img: 'https://media.mahindrafirstchoice.com/live_web_images/usedcarsimg/mfc/4351/577927/cover_image-20230718161449.jpeg' },
             { id: 'sedan', name: 'Sedan (Dzire / Etios)', seats: '4', rateOneWay: 15, rateRound: 14, driver: 500, img: 'https://s3.ap-south-1.amazonaws.com/cb360static/uploads/333742ef-2f6c-4f06-9664-faede6dcc1d8--New%20Project%20-%202025-01-16T161103.598.webp' },
             { id: 'ertiga', name: 'SUV - Maruti Ertiga', seats: '6', rateOneWay: 21, rateRound: 19, driver: 500, img: 'https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Ertiga-Tour/9617/1762858404297/front-left-side-47.jpg' },
             { id: 'innova', name: 'SUV - Toyota Innova', seats: '7', rateOneWay: 21, rateRound: 19, driver: 500, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_MUWMKmSFUy-ITxT3-nVzgiCmnp3mPH5GN9UfG9w3JF7ua_6bWbDNc0&s=10' },

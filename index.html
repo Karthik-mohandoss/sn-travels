@@ -127,7 +127,7 @@
                         <label class="input-label" for="mobile">Mobile Number</label>
                         <div class="input-field">
                             <i class="fas fa-mobile-alt"></i>
-                            <input type="tel" id="mobile" name="mobile" placeholder="+91 10-digit number" required>
+                            <input type="tel" id="mobile" name="mobile" placeholder="+91 10-digit number" pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits" required>
                         </div>
                     </div>
                     
@@ -246,6 +246,29 @@
             
             <div class="fleet-grid">
                 
+                <!-- Vehicle 0: Hatchback -->
+                <div class="fleet-card">
+                    <div class="fleet-img">
+                        <img src="https://media.mahindrafirstchoice.com/live_web_images/usedcarsimg/mfc/4351/577927/cover_image-20230718161449.jpeg" alt="Hatchback">
+                    </div>
+                    <div class="fleet-content">
+                        <h3 class="fleet-title">Hatchback (Indica / Swift)</h3>
+                        <p style="font-size: 0.85rem; color: var(--primary); margin-top: -5px; margin-bottom: 10px; font-weight: 600;">Perfect for 1-4 Passengers</p>
+                        <div class="fleet-features">
+                            <span><i class="fas fa-users"></i> 4 Seats</span>
+                            <span><i class="fas fa-snowflake"></i> AC</span>
+                            <span><i class="fas fa-suitcase"></i> 2 Bags</span>
+                        </div>
+                        <div class="fleet-rates" style="background:rgba(255,255,255,0.05); border: 1px solid rgba(255,183,3,0.3); padding:15px; border-radius:8px; margin-bottom:15px; font-size:0.9rem; color: white;">
+                            <div style="display:flex; justify-content:space-between; margin-bottom:8px;"><span>One Way <small style="color:#aaa;">(Min 130km)</small>:</span> <strong style="color:var(--primary);">₹15/km</strong></div>
+                            <div style="display:flex; justify-content:space-between; margin-bottom:8px;"><span>Round Trip <small style="color:#aaa;">(Min 250km)</small>:</span> <strong style="color:var(--primary);">₹14/km</strong></div>
+                            <div style="display:flex; justify-content:space-between;"><span>Driver Bata:</span> <strong style="color:var(--primary);">₹500</strong></div>
+                        </div>
+                        <div class="fleet-footer">
+                            <a href="#home" class="btn btn-primary" style="width:100%; text-align:center;">Book Hatchback</a>
+                        </div>
+                    </div>
+                </div>
                 <!-- Vehicle 1 -->
                 <div class="fleet-card">
                     <div class="fleet-img">
@@ -453,7 +476,7 @@
                     <label class="input-label" for="modalMobile">Mobile Number</label>
                     <div class="input-field">
                         <i class="fas fa-mobile-alt"></i>
-                        <input type="tel" id="modalMobile" name="mobile" placeholder="+91 10-digit number" required>
+                        <input type="tel" id="modalMobile" name="mobile" placeholder="+91 10-digit number" pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits" required>
                     </div>
                 </div>
                 
