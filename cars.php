@@ -105,7 +105,7 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
             </nav>
             <div class="header-actions">
                 <a href="tel:+919080573379" class="btn btn-outline">
-                    <i class="fas fa-phone-alt"></i> +91 90805 73379
+                    <i class="fas fa-phone"></i> +91 90805 73379
                 </a>
             </div>
         </div>
@@ -162,7 +162,7 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
                     <h3 class="footer-title">Contact Us</h3>
                     <div class="footer-contact">
                         <div class="fc-item">
-                            <div class="fc-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="fc-icon"><i class="fas fa-phone"></i></div>
                             <div class="fc-text">
                                 <h4>Call or WhatsApp</h4>
                                 <p>+91 90805 73379</p>
@@ -256,7 +256,7 @@ $dropoff = isset($_GET['dropoff']) ? htmlspecialchars($_GET['dropoff']) : '';
                         <div class="car-info">
                             <div class="car-name">${c.name}</div>
                             <div class="car-seats">${c.seats} Seater AC Cab</div>
-                            <div style="font-size: 0.85rem; color: #777;"><i class="fas fa-phone-alt" style="color: green;"></i> Contact us for custom group pricing</div>
+                            <div style="font-size: 0.85rem; color: #777;"><i class="fas fa-phone" style="color: green;"></i> Contact us for custom group pricing</div>
                         </div>
                         <div style="text-align:right; display:flex; flex-direction:column; justify-content:center;">
                             <a href="tel:+919080573379" class="btn btn-primary" style="margin-top:auto; margin-bottom:auto;">Call Now</a>

@@ -80,7 +80,7 @@ $distance = isset($_GET['distance']) ? htmlspecialchars($_GET['distance']) : '';
                 <img src="logo.png" alt="SN Travels Logo" class="brand-logo">
             </a>
             <div class="header-actions">
-                <a href="tel:+919080573379" class="btn btn-outline"><i class="fas fa-phone-alt"></i> +91 90805 73379</a>
+                <a href="tel:+919080573379" class="btn btn-outline"><i class="fas fa-phone"></i> +91 90805 73379</a>
             </div>
         </div>
     </header>
@@ -151,7 +151,7 @@ $distance = isset($_GET['distance']) ? htmlspecialchars($_GET['distance']) : '';
                     <h3 class="footer-title">Contact Us</h3>
                     <div class="footer-contact">
                         <div class="fc-item">
-                            <div class="fc-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="fc-icon"><i class="fas fa-phone"></i></div>
                             <div class="fc-text">
                                 <h4>Call or WhatsApp</h4>
                                 <p>+91 90805 73379</p>

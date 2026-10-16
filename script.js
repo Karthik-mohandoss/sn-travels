@@ -40,30 +40,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Swap Locations logic remains
-    const swapBtn = document.querySelector('.swap-btn');
-    if (swapBtn) {
-        swapBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const fromInput = document.getElementById('pickup');
-            const toInput = document.getElementById('dropoff');
-            
-            if (fromInput && toInput) {
-                const temp = fromInput.value;
-                fromInput.value = toInput.value;
-                toInput.value = temp;
+    // Swap Locations logic
+    const setupSwap = (btnSelector, fromId, toId) => {
+        const btn = document.querySelector(btnSelector);
+        if (btn) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const fromInput = document.getElementById(fromId);
+                const toInput = document.getElementById(toId);
                 
-                swapBtn.style.transform = 'rotate(180deg)';
-                setTimeout(() => {
-                    swapBtn.style.transition = 'none';
-                    swapBtn.style.transform = 'rotate(0deg)';
+                if (fromInput && toInput) {
+                    const temp = fromInput.value;
+                    fromInput.value = toInput.value;
+                    toInput.value = temp;
+                    
+                    btn.style.transform = 'rotate(180deg) scale(1.15)';
                     setTimeout(() => {
-                        swapBtn.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
-                    }, 50);
-                }, 300);
-            }
-        });
-    }
+                        btn.style.transition = 'none';
+                        btn.style.transform = 'rotate(0deg)';
+                        setTimeout(() => {
+                            btn.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                        }, 50);
+                    }, 300);
+                }
+            });
+        }
+    };
+    setupSwap('#bookingForm .swap-btn', 'pickup', 'dropoff');
+    setupSwap('#modalSwapBtn', 'modalPickup', 'modalDropoff');
 
     // Modal Logic
     const modal = document.getElementById('bookingModal');

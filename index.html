@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=4.1">    <!-- Google tag (gtag.js) -->
+    <link rel="stylesheet" href="style.css?v=4.2">    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18445888475"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -67,7 +67,7 @@
 
             <div class="header-actions">
                 <a href="tel:+919080573379" class="btn btn-outline">
-                    <i class="fas fa-phone-alt"></i> +91 90805 73379
+                    <i class="fas fa-phone"></i> +91 90805 73379
                 </a>
                 <a href="#home" class="btn btn-primary">
                     Book Ride
@@ -86,7 +86,7 @@
         <a href="#fleet" class="nav-link">Our Fleet</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="tel:+919080573379" class="btn btn-primary" style="margin-top: 1rem;">
-            <i class="fas fa-phone-alt"></i> Call Now
+            <i class="fas fa-phone"></i> Call Now
         </a>
     </nav>
 
@@ -106,7 +106,7 @@
                 <div class="hero-actions">
                     <a href="#services" class="btn btn-primary">Explore Services</a>
                     <a href="tel:+919080573379" class="btn btn-outline" style="color: white; border-color: rgba(255,255,255,0.3);">
-                        <i class="fas fa-phone-alt"></i> +91 90805 73379
+                        <i class="fas fa-phone"></i> +91 90805 73379
                     </a>
                 </div>
                 <div class="hero-features">
@@ -125,7 +125,7 @@
                 </div>
                 <form id="bookingForm" action="lead.php" method="GET">
                     <div class="input-group">
-                        <label class="input-label" for="mobile"><i class="fas fa-phone-alt"></i> Mobile Number</label>
+                        <label class="input-label" for="mobile"><i class="fas fa-phone"></i> Mobile Number</label>
                         <div class="input-field input-field-mobile">
                             <span class="field-icon-badge icon-mobile"><i class="fas fa-mobile-alt"></i></span>
                             <div class="input-wrapper">
@@ -135,25 +135,29 @@
                         </div>
                     </div>
                     
-                    <div class="input-group" style="margin-bottom: 0;">
-                        <label class="input-label" for="pickup"><i class="fas fa-map-marker-alt" style="color: #059669;"></i> Pickup Location</label>
-                        <div class="input-field input-field-pickup">
-                            <span class="field-icon-badge icon-pickup"><i class="fas fa-location-arrow"></i></span>
-                            <input type="text" id="pickup" name="pickup" placeholder="Enter pickup city / area" required autocomplete="off">
+                    <div class="route-group-wrapper">
+                        <div class="route-fields">
+                            <div class="input-group" style="margin-bottom: 0;">
+                                <label class="input-label" for="pickup"><i class="fas fa-map-marker-alt" style="color: #059669;"></i> Pickup Location</label>
+                                <div class="input-field input-field-pickup">
+                                    <span class="field-icon-badge icon-pickup"><i class="fas fa-location-arrow"></i></span>
+                                    <input type="text" id="pickup" name="pickup" placeholder="Enter pickup city / area" required autocomplete="off">
+                                </div>
+                            </div>
+                            
+                            <div class="input-group" style="margin-bottom: 0;">
+                                <label class="input-label" for="dropoff"><i class="fas fa-map-pin" style="color: #DC2626;"></i> Drop Location</label>
+                                <div class="input-field input-field-drop">
+                                    <span class="field-icon-badge icon-drop"><i class="fas fa-map-marker-alt"></i></span>
+                                    <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop destination" required autocomplete="off">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="input-swap">
-                        <button type="button" class="swap-btn" title="Swap Locations">
-                            <i class="fas fa-exchange-alt"></i>
-                        </button>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label class="input-label" for="dropoff"><i class="fas fa-map-pin" style="color: #DC2626;"></i> Drop Location</label>
-                        <div class="input-field input-field-drop">
-                            <span class="field-icon-badge icon-drop"><i class="fas fa-map-marker-alt"></i></span>
-                            <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop destination" required autocomplete="off">
+
+                        <div class="route-swap-col">
+                            <button type="button" class="swap-btn" title="Swap Locations">
+                                <i class="fas fa-arrows-alt-v"></i>
+                            </button>
                         </div>
                     </div>
 
@@ -390,7 +394,7 @@
                             <span><i class="fas fa-snowflake"></i> High AC</span>
                         </div>
                         <div class="fleet-footer" style="margin-top: 15px;">
-                            <a href="tel:+919080573379" class="btn btn-primary" style="width:100%; text-align:center;"><i class="fas fa-phone-alt"></i> Call for Price</a>
+                            <a href="tel:+919080573379" class="btn btn-primary" style="width:100%; text-align:center;"><i class="fas fa-phone"></i> Call for Price</a>
                         </div>
                     </div>
                 </div>
@@ -405,7 +409,7 @@
             <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Book your ride today and enjoy hassle-free, comfortable transportation across Tamil Nadu.</p>
             <div class="cta-btns">
                 <a href="#home" class="btn btn-primary"><i class="fas fa-taxi"></i> Book Online</a>
-                <a href="tel:+919080573379" class="btn btn-outline" style="color: white; border-color: white;"><i class="fas fa-phone-alt"></i> +91 90805 73379</a>
+                <a href="tel:+919080573379" class="btn btn-outline" style="color: white; border-color: white;"><i class="fas fa-phone"></i> +91 90805 73379</a>
             </div>
         </div>
     </section>
@@ -466,7 +470,7 @@
                     <h3 class="footer-title">Contact Us</h3>
                     <div class="footer-contact">
                         <div class="fc-item">
-                            <div class="fc-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="fc-icon"><i class="fas fa-phone"></i></div>
                             <div class="fc-text">
                                 <h4>Call or WhatsApp</h4>
                                 <p>+91 90805 73379</p>
@@ -500,7 +504,7 @@
             <form id="confirmBookingForm" action="lead.php" method="GET">
                 <input type="hidden" id="modalCabType" name="cabType" value="General">
                 <div class="input-group">
-                    <label class="input-label" for="modalMobile"><i class="fas fa-phone-alt"></i> Mobile Number</label>
+                    <label class="input-label" for="modalMobile"><i class="fas fa-phone"></i> Mobile Number</label>
                     <div class="input-field input-field-mobile">
                         <span class="field-icon-badge icon-mobile"><i class="fas fa-mobile-alt"></i></span>
                         <div class="input-wrapper">
@@ -510,21 +514,31 @@
                     </div>
                 </div>
                 
-                <div class="input-group">
-                    <label class="input-label" for="modalPickup"><i class="fas fa-map-marker-alt" style="color: #059669;"></i> Pickup Location</label>
-                    <div class="input-field input-field-pickup">
-                        <span class="field-icon-badge icon-pickup"><i class="fas fa-location-arrow"></i></span>
-                        <input type="text" id="modalPickup" name="pickup" placeholder="Enter pickup city or area" required autocomplete="off">
+                    <div class="route-group-wrapper">
+                        <div class="route-fields">
+                            <div class="input-group" style="margin-bottom: 0;">
+                                <label class="input-label" for="modalPickup"><i class="fas fa-map-marker-alt" style="color: #059669;"></i> Pickup Location</label>
+                                <div class="input-field input-field-pickup">
+                                    <span class="field-icon-badge icon-pickup"><i class="fas fa-location-arrow"></i></span>
+                                    <input type="text" id="modalPickup" name="pickup" placeholder="Enter pickup city or area" required autocomplete="off">
+                                </div>
+                            </div>
+                            
+                            <div class="input-group" style="margin-bottom: 0;">
+                                <label class="input-label" for="modalDropoff"><i class="fas fa-map-pin" style="color: #DC2626;"></i> Drop Location</label>
+                                <div class="input-field input-field-drop">
+                                    <span class="field-icon-badge icon-drop"><i class="fas fa-map-marker-alt"></i></span>
+                                    <input type="text" id="modalDropoff" name="dropoff" placeholder="Enter drop destination" required autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="route-swap-col">
+                            <button type="button" class="swap-btn" id="modalSwapBtn" title="Swap Locations">
+                                <i class="fas fa-arrows-alt-v"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="input-group">
-                    <label class="input-label" for="modalDropoff"><i class="fas fa-map-pin" style="color: #DC2626;"></i> Drop Location</label>
-                    <div class="input-field input-field-drop">
-                        <span class="field-icon-badge icon-drop"><i class="fas fa-map-marker-alt"></i></span>
-                        <input type="text" id="modalDropoff" name="dropoff" placeholder="Enter drop destination" required autocomplete="off">
-                    </div>
-                </div>
 
                 <button type="submit" class="btn btn-primary book-btn" id="confirmBookBtn" style="margin-top: 0.5rem;">
                     <span>Confirm Booking</span>
@@ -537,7 +551,7 @@
     <!-- Floating Actions -->
     <div class="floating-actions">
         <a href="tel:+919080573379" class="float-btn float-call" title="Call Us">
-            <i class="fas fa-phone-alt"></i>
+            <i class="fas fa-phone"></i>
         </a>
         <a href="https://wa.me/919080573379?text=Hi%20SN%20Travels!%20I%20want%20to%20book%20a%20ride." class="float-btn float-wa" target="_blank" rel="noopener" title="WhatsApp Us">
             <i class="fab fa-whatsapp"></i>
@@ -545,6 +559,6 @@
     </div>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH5nO7MHp_16hu6xl3BITgFy43xF1GLt0&libraries=places&callback=initMap"></script>
-    <script src="script.js?v=2.2"></script>
+    <script src="script.js?v=2.3"></script>
 </body>
 </html>
