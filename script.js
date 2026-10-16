@@ -157,6 +157,27 @@ document.addEventListener('DOMContentLoaded', () => {
     setupConversionForm('bookingForm');
     setupConversionForm('confirmBookingForm');
 
+    // Auto-clean mobile inputs (strip non-digits, leading 0 or 91)
+    const cleanMobileInput = (inputId) => {
+        const input = document.getElementById(inputId);
+        if (input) {
+            input.addEventListener('input', function() {
+                let val = this.value.replace(/\D/g, '');
+                if (val.length === 11 && val.startsWith('0')) {
+                    val = val.substring(1);
+                } else if (val.length === 12 && val.startsWith('91')) {
+                    val = val.substring(2);
+                }
+                if (val.length > 10) {
+                    val = val.slice(0, 10);
+                }
+                this.value = val;
+            });
+        }
+    };
+    cleanMobileInput('mobile');
+    cleanMobileInput('modalMobile');
+
 });
 
 // Global callback for Google Maps API

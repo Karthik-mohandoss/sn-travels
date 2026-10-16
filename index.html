@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=3.0">    <!-- Google tag (gtag.js) -->
+    <link rel="stylesheet" href="style.css?v=4.0">    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18445888475"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -119,23 +119,27 @@
             <!-- Booking Card -->
             <div class="booking-card">
                 <div class="bc-header">
-                    <h2 class="bc-title">Quick Booking</h2>
-                    <p class="bc-subtitle">Enter details to get instant fares</p>
+                    <span class="bc-badge"><i class="fas fa-bolt"></i> Instant Fare Estimate</span>
+                    <h2 class="bc-title">Check Fares & Book</h2>
+                    <p class="bc-subtitle">Lowest One-Way & Round Trip Fares across Tamil Nadu</p>
                 </div>
                 <form id="bookingForm" action="lead.php" method="GET">
                     <div class="input-group">
-                        <label class="input-label" for="mobile">Mobile Number</label>
-                        <div class="input-field">
-                            <i class="fas fa-mobile-alt"></i>
-                            <input type="tel" id="mobile" name="mobile" placeholder="+91 10-digit number" pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits" required>
+                        <label class="input-label" for="mobile"><i class="fas fa-phone-alt"></i> Mobile Number</label>
+                        <div class="input-field input-field-mobile">
+                            <span class="field-icon-badge icon-mobile"><i class="fas fa-mobile-alt"></i></span>
+                            <div class="input-wrapper">
+                                <span class="country-code">+91</span>
+                                <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits" inputmode="numeric" required>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="input-group" style="margin-bottom: 0;">
-                        <label class="input-label" for="pickup">Pickup Location</label>
-                        <div class="input-field">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <input type="text" id="pickup" name="pickup" placeholder="City or Area" required>
+                        <label class="input-label" for="pickup"><i class="fas fa-map-marker-alt" style="color: #059669;"></i> Pickup Location</label>
+                        <div class="input-field input-field-pickup">
+                            <span class="field-icon-badge icon-pickup"><i class="fas fa-location-arrow"></i></span>
+                            <input type="text" id="pickup" name="pickup" placeholder="Enter pickup city / area" required autocomplete="off">
                         </div>
                     </div>
                     
@@ -146,16 +150,23 @@
                     </div>
                     
                     <div class="input-group">
-                        <label class="input-label" for="dropoff">Drop Location</label>
-                        <div class="input-field">
-                            <i class="fas fa-map-pin"></i>
-                            <input type="text" id="dropoff" name="dropoff" placeholder="Destination" required>
+                        <label class="input-label" for="dropoff"><i class="fas fa-map-pin" style="color: #DC2626;"></i> Drop Location</label>
+                        <div class="input-field input-field-drop">
+                            <span class="field-icon-badge icon-drop"><i class="fas fa-map-marker-alt"></i></span>
+                            <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop destination" required autocomplete="off">
                         </div>
                     </div>
 
                     <button type="submit" class="btn btn-primary book-btn" id="bookBtn">
-                        Check Fares & Book
+                        <span>Check Fares & Book</span>
+                        <i class="fas fa-arrow-right"></i>
                     </button>
+
+                    <div class="form-trust-badges">
+                        <span><i class="fas fa-check-circle"></i> Lowest ₹/km Rate</span>
+                        <span><i class="fas fa-check-circle"></i> No Advance</span>
+                        <span><i class="fas fa-check-circle"></i> 24/7 Available</span>
+                    </div>
                 </form>
             </div>
         </div>
@@ -489,31 +500,35 @@
             <form id="confirmBookingForm" action="lead.php" method="GET">
                 <input type="hidden" id="modalCabType" name="cabType" value="General">
                 <div class="input-group">
-                    <label class="input-label" for="modalMobile">Mobile Number</label>
-                    <div class="input-field">
-                        <i class="fas fa-mobile-alt"></i>
-                        <input type="tel" id="modalMobile" name="mobile" placeholder="+91 10-digit number" pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits" required>
+                    <label class="input-label" for="modalMobile"><i class="fas fa-phone-alt"></i> Mobile Number</label>
+                    <div class="input-field input-field-mobile">
+                        <span class="field-icon-badge icon-mobile"><i class="fas fa-mobile-alt"></i></span>
+                        <div class="input-wrapper">
+                            <span class="country-code">+91</span>
+                            <input type="tel" id="modalMobile" name="mobile" placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits" inputmode="numeric" required>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="input-group">
-                    <label class="input-label" for="modalPickup">Pickup Location</label>
-                    <div class="input-field">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <input type="text" id="modalPickup" name="pickup" placeholder="City or Area" required>
+                    <label class="input-label" for="modalPickup"><i class="fas fa-map-marker-alt" style="color: #059669;"></i> Pickup Location</label>
+                    <div class="input-field input-field-pickup">
+                        <span class="field-icon-badge icon-pickup"><i class="fas fa-location-arrow"></i></span>
+                        <input type="text" id="modalPickup" name="pickup" placeholder="Enter pickup city or area" required autocomplete="off">
                     </div>
                 </div>
                 
                 <div class="input-group">
-                    <label class="input-label" for="modalDropoff">Drop Location</label>
-                    <div class="input-field">
-                        <i class="fas fa-map-pin"></i>
-                        <input type="text" id="modalDropoff" name="dropoff" placeholder="Destination" required>
+                    <label class="input-label" for="modalDropoff"><i class="fas fa-map-pin" style="color: #DC2626;"></i> Drop Location</label>
+                    <div class="input-field input-field-drop">
+                        <span class="field-icon-badge icon-drop"><i class="fas fa-map-marker-alt"></i></span>
+                        <input type="text" id="modalDropoff" name="dropoff" placeholder="Enter drop destination" required autocomplete="off">
                     </div>
                 </div>
 
                 <button type="submit" class="btn btn-primary book-btn" id="confirmBookBtn" style="margin-top: 0.5rem;">
-                    Confirm Booking
+                    <span>Confirm Booking</span>
+                    <i class="fas fa-arrow-right"></i>
                 </button>
             </form>
         </div>
@@ -530,6 +545,6 @@
     </div>
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH5nO7MHp_16hu6xl3BITgFy43xF1GLt0&libraries=places&callback=initMap"></script>
-    <script src="script.js?v=2.1"></script>
+    <script src="script.js?v=2.2"></script>
 </body>
 </html>
