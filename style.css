@@ -256,6 +256,34 @@ img {
   gap: 1rem;
 }
 
+.header-wa-btn {
+  display: none;
+}
+
+.header-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.65rem 1.15rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--primary);
+  color: var(--bg-dark);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.header-call-btn:hover {
+  background: var(--primary);
+  color: var(--bg-dark);
+}
+
+.header-call-btn i {
+  color: var(--bg-dark);
+}
+
 .mobile-menu-btn {
   display: none;
   font-size: 1.5rem;
@@ -1008,9 +1036,87 @@ img {
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 0.35rem 0;
+  }
+
+  .header.scrolled {
+    padding: 0.35rem 0;
+  }
+
+  .header-container {
+    height: 58px;
+  }
+
+  .brand-logo {
+    height: 55px !important;
+    max-height: 55px;
+    max-width: 145px;
+  }
+
+  .nav-links, .header-book-btn {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .header-wa-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #25D366;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(37, 211, 102, 0.3);
+  }
+
+  .header-call-btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 10px;
+    background: #0A1128;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px rgba(10, 17, 40, 0.2);
+    text-decoration: none;
+  }
+
+  .header-call-btn .call-text {
+    display: none;
+  }
+
+  .header-call-btn i {
+    color: #FFB703;
+    font-size: 1rem;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #F1F5F9;
+    border: 1.5px solid #CBD5E1;
+    color: #0A1128;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 0;
+    cursor: pointer;
+  }
+
   .hero {
-    padding-top: 85px;
-    padding-bottom: 3rem;
+    padding-top: 76px;
+    padding-bottom: 2.5rem;
     min-height: auto;
   }
 
@@ -1085,14 +1191,6 @@ img {
     font-size: 0.95rem;
   }
 
-  .nav-links, .header-actions .btn {
-    display: none;
-  }
-  
-  .mobile-menu-btn {
-    display: block;
-  }
-  
   .section-padding {
     padding: 3rem 0;
   }
@@ -1109,10 +1207,10 @@ img {
 /* Mobile Nav Overlay */
 .mobile-nav {
   position: fixed;
-  top: 80px;
+  top: 66px;
   left: 0;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 66px);
   background: var(--surface-white);
   padding: 2rem;
   display: flex;
