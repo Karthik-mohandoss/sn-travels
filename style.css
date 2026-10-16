@@ -345,142 +345,112 @@ img {
   font-size: 1.25rem;
 }
 
-/* Booking Card */
+/* ================== BOOKING CARD (DOT2DROP STYLE) ================== */
 .booking-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 2.25rem 2.25rem 2rem;
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 183, 3, 0.3);
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.45);
   position: relative;
-  border-top: 5px solid var(--primary);
+  overflow: hidden;
+  border: none;
+  padding: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.bc-header {
-  margin-bottom: 1.5rem;
-}
-
-.bc-badge {
-  display: inline-flex;
+.bc-banner {
+  background: linear-gradient(135deg, #FB8500 0%, #FFB703 100%);
+  padding: 1.35rem 1.65rem;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(255, 183, 3, 0.15);
-  color: #B45309;
-  border: 1px solid rgba(255, 183, 3, 0.4);
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 4px 12px;
-  border-radius: 20px;
-  margin-bottom: 0.65rem;
+  gap: 1rem;
 }
 
-.bc-badge i {
-  color: var(--primary);
+.bc-banner-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.bc-banner-text {
+  color: #FFFFFF;
 }
 
 .bc-title {
-  font-size: 1.65rem;
-  color: var(--bg-dark);
+  font-size: 1.45rem;
   font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.25rem;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .bc-subtitle {
-  color: #64748B;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 3px 0 0;
   font-weight: 500;
 }
 
+.bc-body {
+  padding: 1.65rem 1.65rem 1.4rem;
+}
+
 .input-group {
-  margin-bottom: 1.15rem;
+  margin-bottom: 1rem;
 }
 
 .input-label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  display: block;
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.78rem;
+  font-weight: 800;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #1E293B;
-  margin-bottom: 0.45rem;
+  letter-spacing: 0.06em;
+  color: #0A1128;
+  margin-bottom: 0.4rem;
 }
 
 .input-field {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  padding: 0.85rem 1rem;
-  background: #FFFFFF;
-  border: 2px solid #1E293B;
+  gap: 0.75rem;
+  padding: 0.85rem 1.15rem;
+  background: #F8FAFC;
+  border: 1.5px solid #CBD5E1;
   border-radius: 14px;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .input-field:hover {
-  border-color: #0F172A;
+  border-color: #94A3B8;
   background: #FFFFFF;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .input-field:focus-within {
-  border-color: #D97706;
+  border: 2px solid #FB8500;
   background: #FFFFFF;
-  box-shadow: 0 0 0 3.5px rgba(255, 183, 3, 0.35), 0 4px 12px rgba(0,0,0,0.08);
-  transform: translateY(-1px);
+  box-shadow: 0 0 0 4px rgba(251, 133, 0, 0.18), 0 4px 12px rgba(0,0,0,0.04);
 }
 
-/* Icon Badges */
-.field-icon-badge {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.95rem;
+.field-icon {
+  color: #FB8500;
+  font-size: 1.15rem;
   flex-shrink: 0;
-  transition: transform 0.2s ease;
-}
-
-.input-field:focus-within .field-icon-badge {
-  transform: scale(1.08);
-}
-
-.icon-mobile {
-  background: #EFF6FF;
-  color: #2563EB;
-}
-
-.icon-pickup {
-  background: #ECFDF5;
-  color: #059669;
-}
-
-.icon-drop {
-  background: #FEF2F2;
-  color: #DC2626;
-}
-
-.input-wrapper {
-  display: flex;
-  align-items: center;
-  width: 100%;
 }
 
 .country-code {
-  font-weight: 800;
-  color: #0F172A;
+  font-weight: 700;
+  color: #0A1128;
   font-size: 0.95rem;
-  padding-right: 8px;
-  margin-right: 8px;
-  border-right: 2px solid #1E293B;
+  padding-right: 4px;
   user-select: none;
 }
 
@@ -496,95 +466,79 @@ img {
 }
 
 .input-field input::placeholder {
-  color: #64748B;
-  font-weight: 500;
+  color: #94A3B8;
+  font-weight: 400;
   font-size: 0.925rem;
 }
 
-/* Route Inputs & Side Swap Button (No overlapping/touching) */
-.route-group-wrapper {
+/* Swap button row on the right side */
+.swap-row-right {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 1.15rem;
+  justify-content: flex-end;
+  padding-right: 0.85rem;
+  margin-top: -0.35rem;
+  margin-bottom: -0.35rem;
+  position: relative;
+  z-index: 5;
 }
 
-.route-fields {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-.route-swap-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  padding-top: 20px;
-}
-
-.swap-btn {
-  width: 44px;
-  height: 44px;
+.swap-btn-pill {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: #FFFFFF;
-  border: 2px solid #1E293B;
+  border: 2px solid #FB8500;
+  color: #FB8500;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1E293B;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
 
-.swap-btn:hover {
-  background: var(--primary);
-  color: var(--bg-dark);
-  border-color: #0F172A;
-  transform: scale(1.1);
-  box-shadow: 0 6px 14px rgba(255, 183, 3, 0.4);
+.swap-btn-pill:hover {
+  background: #FB8500;
+  color: #FFFFFF;
+  transform: rotate(180deg) scale(1.1);
+  box-shadow: 0 4px 12px rgba(251, 133, 0, 0.35);
 }
 
-.swap-btn:active {
+.swap-btn-pill:active {
   transform: scale(0.92);
 }
 
 .book-btn {
   width: 100%;
   margin-top: 1.15rem;
-  padding: 1.05rem 1.5rem;
-  font-size: 1.15rem;
+  padding: 1.1rem 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #FFB703 0%, #FB8500 100%);
-  color: #0A1128;
+  background: #0A1128;
+  color: #FFFFFF;
   border: none;
   cursor: pointer;
-  box-shadow: 0 10px 25px -5px rgba(255, 183, 3, 0.5);
+  box-shadow: 0 10px 25px -5px rgba(10, 17, 40, 0.4);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   letter-spacing: 0.01em;
 }
 
-.book-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px -4px rgba(255, 183, 3, 0.6);
-  color: #0A1128;
-}
-
 .book-btn i {
-  transition: transform 0.2s ease;
+  color: #FFB703;
+  font-size: 1.15rem;
 }
 
-.book-btn:hover i {
-  transform: translateX(4px);
+.book-btn:hover {
+  background: #14213d;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -4px rgba(10, 17, 40, 0.5);
 }
 
 .form-trust-badges {
@@ -592,21 +546,21 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-top: 1.25rem;
-  padding-top: 1rem;
-  border-top: 1px dashed #E2E8F0;
-  font-size: 0.75rem;
-  color: #64748B;
-  font-weight: 600;
+  padding-top: 0.85rem;
+  border-top: 1px solid #E2E8F0;
+  font-size: 0.78rem;
+  color: #0A1128;
+  font-weight: 700;
 }
 
 .form-trust-badges span {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .form-trust-badges i {
-  color: #10B981;
+  color: #FB8500;
   font-size: 0.85rem;
 }
 
@@ -1065,9 +1019,20 @@ img {
   }
 
   .booking-card {
-    padding: 1.35rem 1.15rem;
-    border-radius: 16px;
-    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 183, 3, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.4);
+    padding: 0;
+  }
+
+  .bc-banner {
+    padding: 1.15rem 1.25rem;
+  }
+
+  .bc-banner-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 1.2rem;
   }
 
   .bc-title {
@@ -1078,21 +1043,22 @@ img {
     font-size: 0.8rem;
   }
 
+  .bc-body {
+    padding: 1.25rem 1.15rem 1.15rem;
+  }
+
   .input-field {
-    padding: 0.75rem 0.85rem;
+    padding: 0.75rem 0.95rem;
     border-radius: 12px;
   }
 
-  .field-icon-badge {
-    width: 32px;
-    height: 32px;
-    font-size: 0.85rem;
+  .field-icon {
+    font-size: 1.05rem;
   }
 
   .country-code {
     font-size: 0.9rem;
-    padding-right: 6px;
-    margin-right: 6px;
+    padding-right: 4px;
   }
 
   .input-field input {

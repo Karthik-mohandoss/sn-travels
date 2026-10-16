@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     };
-    setupSwap('#bookingForm .swap-btn', 'pickup', 'dropoff');
+    setupSwap('#bookingForm .swap-btn-pill, #bookingForm .swap-btn', 'pickup', 'dropoff');
     setupSwap('#modalSwapBtn', 'modalPickup', 'modalDropoff');
 
     // Modal Logic
