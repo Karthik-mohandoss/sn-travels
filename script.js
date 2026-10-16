@@ -113,6 +113,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Google Ads Conversion Tracking on "Check Fares & Book" Form Submission
+    let isSubmitting = false;
+    const setupConversionForm = (formId) => {
+        const form = document.getElementById(formId);
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                if (isSubmitting) return;
+                e.preventDefault();
+                isSubmitting = true;
+
+                const formEl = this;
+                let submitted = false;
+
+                const doSubmit = () => {
+                    if (!submitted) {
+                        submitted = true;
+                        HTMLFormElement.prototype.submit.call(formEl);
+                    }
+                };
+
+                const submitBtn = formEl.querySelector('button[type="submit"]');
+                if (submitBtn) {
+                    submitBtn.style.opacity = '0.7';
+                    submitBtn.innerText = 'Processing...';
+                }
+
+                // Fire Google Ads Conversion Event
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-18445888475/Kt08CLS75YAdENvX19tE',
+                        'event_callback': doSubmit
+                    });
+                    // Fallback after 400ms in case gtag callback is delayed or blocked
+                    setTimeout(doSubmit, 400);
+                } else {
+                    doSubmit();
+                }
+            });
+        }
+    };
+
+    setupConversionForm('bookingForm');
+    setupConversionForm('confirmBookingForm');
+
 });
 
 // Global callback for Google Maps API
